@@ -48,17 +48,17 @@ class KafkaQueue extends Queue implements QueueContract
                 $job->handle();
                 break;
             case RD_KAFKA_RESP_ERR__PARTITION_EOF:
-                var_dump("No more messages; will wait for more\n");
+                print_r("\e[0;30;46mInfo: No more messages; will wait for more\e[0m\n");
                 break;
             case RD_KAFKA_RESP_ERR__TIMED_OUT:
-                var_dump("Timed out\n");
+                print_r("\e[0;30;41mError: Timed out\e[0m\n");
                 break;
             default:
                 throw new \Exception($message->errstr(), $message->err);
                 break;
             }
         } catch (\Exception $e) {
-            var_dump($e->getMessage());
+            print_r($e->getMessage());
         }
     }
 }
