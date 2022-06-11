@@ -1,0 +1,17 @@
+{
+    "name": "daniel/kafka-queue",
+    "require": {
+        "laravel/framework": "^9.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "Daniel\\KafkaQueue\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DanielVZA",
+            "email": "danielvasquez@protonmail.com"
+        }
+    ]
+}
