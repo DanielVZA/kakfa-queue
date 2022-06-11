@@ -1,7 +1,7 @@
 {
     "name": "daniel/kafka-queue",
     "require": {
-        "laravel/framework": "^9.17"
+        "laravel/framework": "^8.40"
     },
     "autoload": {
         "psr-4": {
